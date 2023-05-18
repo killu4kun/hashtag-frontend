@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import ActionsTable from './components/Table';
 
 function AdminControl() {
   const [webhooks, setWebhooks] = useState<IWebhook[]>([]);
@@ -19,14 +20,7 @@ function AdminControl() {
   return (
     <div>
       <h1>Webhooks</h1>
-      {webhooks &&
-        webhooks.map((webhook, index) => (
-          <div key={index}>
-            <p>Nome: {webhook.nome}</p>
-            <p>Email: {webhook.email}</p>
-            <p>Status: {webhook.status}</p>
-          </div>
-        ))}
+      <ActionsTable webhooks={webhooks} />
       <div>nao tem</div>
     </div>
   );
