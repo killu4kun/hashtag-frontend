@@ -26,14 +26,13 @@ frontend:
 
 ### Typescript
 
-- [React](http://facebook.github.io/react) library used to create user interfaces on web pages.
-- [Vite](https://vitejs.dev/) Get ready for a development environment that can finally catch up with you
-- [TailwindCSS](https://tailwindcss.com/) Tailwind is CSS enviroment.
-
+- [Python](https://www.python.org/) Python is a programming language that lets you work quickly
+and integrate systems more effectively.
+- [Flask](https://flask.palletsprojects.com/en/2.3.x/) Flask provides configuration and conventions, with sensible defaults, to get started.
 
 ### Deploy 
 
-Deploy made on Vercell and this is the link https://hashtag-frontend.vercel.app/
+Deploy made on Render and this is the link https://teste-hashtag.onrender.com
 
 ## Contact
 
