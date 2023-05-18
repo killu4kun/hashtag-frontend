@@ -11,12 +11,14 @@ function AdminControl() {
   }
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/webhooks')
-      .then((response) => response.json())
-      .then((data) => {
-        setWebhooks(data), console.log(data);
-      })
-      .catch((error) => console.error(error));
+    setTimeout(() => {
+      fetch('http://localhost:5000/api/webhooks')
+        .then((response) => response.json())
+        .then((data) => {
+          setWebhooks(data), console.log(data);
+        })
+        .catch((error) => console.error(error));
+    }, 5000);
   }, []);
 
   return (
