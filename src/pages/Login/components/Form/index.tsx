@@ -24,17 +24,20 @@ export default function LoginForm({
   const navigate = useNavigate();
   const handleRegister = async (user: IUser) => {
     try {
-      const response = await fetch('http://localhost:5000/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await fetch(
+        'https://teste-hashtag.onrender.com/signup',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: user.email,
+            senha: user.password,
+            token: user.token,
+          }),
         },
-        body: JSON.stringify({
-          email: user.email,
-          senha: user.password,
-          token: user.token,
-        }),
-      });
+      );
       const data = await response.json();
       if (data.status) {
         toast.error(`${data.message}`, {
@@ -67,7 +70,7 @@ export default function LoginForm({
 
   const handleLogin = async (user: IUser) => {
     try {
-      const response = await fetch('http://localhost:5000/login', {
+      const response = await fetch('https://teste-hashtag.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
