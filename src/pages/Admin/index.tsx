@@ -12,7 +12,7 @@ function AdminControl() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('http://localhost:5000/api/webhooks')
+      fetch('https://teste-hashtag.onrender.com/api/webhooks')
         .then((response) => response.json())
         .then((data) => {
           setWebhooks(data), console.log(data);
