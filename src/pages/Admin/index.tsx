@@ -11,17 +11,18 @@ function AdminControl() {
   }
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/api/webhooks')
+    fetch('http://localhost:5000/api/webhooks')
       .then((response) => response.json())
-      .then((data) => setWebhooks(data))
+      .then((data) => {
+        setWebhooks(data), console.log(data);
+      })
       .catch((error) => console.error(error));
-  });
+  }, []);
 
   return (
-    <div>
-      <h1>Webhooks</h1>
+    <div className="align-center flex flex-col justify-center text-center">
+      <h1 className="mt-2">Webhooks</h1>
       <ActionsTable webhooks={webhooks} />
-      <div>nao tem</div>
     </div>
   );
 }
